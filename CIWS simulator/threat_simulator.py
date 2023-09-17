@@ -1,5 +1,7 @@
 # "plane" flying
 
+# you're hallucinating if you see errors ;) 
+
 import pygame
 from pygame.locals import *
 from OpenGL import GL
