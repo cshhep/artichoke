@@ -3,6 +3,8 @@ import cv2
 import pyautogui
 import time
 
+# THis uses a red dot as the "threat". get a video of a red dot moving on a screen if the threat emulator doesn't work
+
 screen_width, screen_height = pyautogui.size()
 
 MAX_CONTOUR_AREA = 1000
