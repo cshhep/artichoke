@@ -1,33 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coshep</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: #333;
-    }
-    .container {
-      text-align: center;
-    }
-    h1 {
-      color: #007acc;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coshep — Next-Gen Experience</title>
+  <meta name="description" content="A sleek, animated, Apple-style template. Built to wow." />
+  <meta property="og:title" content="Coshep — Next-Gen Experience" />
+  <meta property="og:description" content="A sleek, animated, Apple-style template. Built to wow." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0c10" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/hero.svg" as="image" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to coshep.xyz </h1>
-    <p>This site is working</p>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-blur>
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Coshep logo" width="28" height="28" />
+        <span>Coshep</span>
+      </div>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#product">Product</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="btn small">Get Started</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside id="nav-drawer" class="nav-drawer" hidden>
+    <nav aria-label="Mobile">
+      <a href="#product">Product</a>
+      <a href="#features">Features</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact" class="btn small">Get Started</a>
+      <button class="close-drawer" aria-label="Close menu">Close</button>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero full-bleed" aria-label="Hero">
+      <div class="hero-bg">
+        <div class="gradient"></div>
+        <canvas id="orb"></canvas>
+      </div>
+      <div class="container hero-inner">
+        <h1 class="reveal-up">Crafted to <strong>wow</strong></h1>
+        <p class="reveal-up delay-1">
+          Design that feels effortless. Performance that feels instant. Meet the template that makes your brand look premium.
+        </p>
+        <div class="cta reveal-up delay-2">
+          <a href="#product" class="btn">Explore Product</a>
+          <a href="#gallery" class="btn ghost">See it in action</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT -->
+    <section id="product" class="section container">
+      <div class="section-head">
+        <h2 class="reveal-up">The Product</h2>
+        <p class="muted reveal-up delay-1">Minimal design. Maximal impact.</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card tilt reveal-up">
+          <img src="assets/hero.svg" alt="Product visual" />
+          <h3>Ultra Smooth</h3>
+          <p>60fps interactions, buttery transitions, and just the right depth.</p>
+        </div>
+        <div class="product-card tilt reveal-up delay-1">
+          <img src="assets/hero.svg" alt="Product visual" />
+          <h3>Pixel Perfect</h3>
+          <p>Adaptive layout with sharp typography and accessible contrast.</p>
+        </div>
+        <div class="product-card tilt reveal-up delay-2">
+          <img src="assets/hero.svg" alt="Product visual" />
+          <h3>Ready to Ship</h3>
+          <p>Drop into Netlify and go live in minutes. No build step required.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section container">
+      <div class="section-head">
+        <h2 class="reveal-up">Features</h2>
+        <p class="muted reveal-up delay-1">Everything you need, nothing you don't.</p>
+      </div>
+      <ul class="features-list">
+        <li class="feature reveal-up">
+          <h3>Glass UI</h3>
+          <p>Subtle blur, frosted panels, and depth that feels tactile.</p>
+        </li>
+        <li class="feature reveal-up delay-1">
+          <h3>Motion System</h3>
+          <p>Intersection-based reveals, springy micro-interactions, and parallax.</p>
+        </li>
+        <li class="feature reveal-up delay-2">
+          <h3>Dark-mode Ready</h3>
+          <p>Automatic via media query. Toggle included.</p>
+        </li>
+        <li class="feature reveal-up delay-3">
+          <h3>Instant Deploy</h3>
+          <p>Static assets. Drag & drop to Netlify. You're done.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section container">
+      <div class="section-head">
+        <h2 class="reveal-up">Showcase</h2>
+        <p class="muted reveal-up delay-1">Smooth parallax & subtle hover states.</p>
+      </div>
+      <div class="gallery">
+        <figure class="panel reveal-up"><img src="assets/mock-1.svg" alt="Showcase item 1"><figcaption>Adaptive layouts</figcaption></figure>
+        <figure class="panel reveal-up delay-1"><img src="assets/mock-2.svg" alt="Showcase item 2"><figcaption>Clean components</figcaption></figure>
+        <figure class="panel reveal-up delay-2"><img src="assets/mock-3.svg" alt="Showcase item 3"><figcaption>Elegant motion</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-label="Highlights">
+      <div class="track">
+        <span>High Contrast</span>
+        <span>Fluid Motion</span>
+        <span>Responsive</span>
+        <span>Accessible</span>
+        <span>Netlify Ready</span>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section container">
+      <div class="section-head">
+        <h2 class="reveal-up">Pricing</h2>
+        <p class="muted reveal-up delay-1">Simple, transparent.</p>
+      </div>
+      <div class="pricing">
+        <div class="price-card reveal-up">
+          <h3>Starter</h3>
+          <p class="price">$0</p>
+          <ul>
+            <li>All components</li>
+            <li>Basic animations</li>
+            <li>Email support</li>
+          </ul>
+          <a href="#contact" class="btn">Choose</a>
+        </div>
+        <div class="price-card featured reveal-up delay-1">
+          <h3>Pro</h3>
+          <p class="price">$29</p>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>Advanced motion</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#contact" class="btn">Choose</a>
+        </div>
+        <div class="price-card reveal-up delay-2">
+          <h3>Team</h3>
+          <p class="price">$99</p>
+          <ul>
+            <li>Unlimited projects</li>
+            <li>Collaboration tools</li>
+            <li>SLAs & onboarding</li>
+          </ul>
+          <a href="#contact" class="btn">Choose</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <div class="section-head">
+        <h2 class="reveal-up">Get in touch</h2>
+        <p class="muted reveal-up delay-1">We’d love to hear from you.</p>
+      </div>
+      <form class="contact reveal-up" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <label>
+          <span>Name</span>
+          <input name="name" required placeholder="Your name" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input name="email" type="email" required placeholder="you@domain.com" />
+        </label>
+        <label class="full">
+          <span>Message</span>
+          <textarea name="message" rows="4" required placeholder="Tell us about your project"></textarea>
+        </label>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand small">
+        <img src="assets/logo.svg" width="22" height="22" alt="Coshep logo" />
+        <span>Coshep</span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#product">Product</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="meta">
+        <button id="theme-toggle" class="btn ghost small" aria-pressed="false">Toggle theme</button>
+        <span>© <span id="year"></span> Coshep</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
